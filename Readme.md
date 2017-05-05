@@ -16,4 +16,6 @@
 
 > After you configure this data, you can run the application and start testing!
 
-
+### The solution ###
+> In order to be able to embedd the dashboards, we need to include PowerBI Package from NuGET. 
+![NuGET](imgs/powerbi_1.png)
