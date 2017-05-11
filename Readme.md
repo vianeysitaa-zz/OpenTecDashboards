@@ -19,3 +19,17 @@
 ### The solution ###
 > In order to be able to embedd the dashboards, we need to include PowerBI Package from NuGET. 
 ![NuGET](imgs/powerbi_1.png)
+
+We have two classes in the Model to look at: ReportViewModel and ReportsViewModel. Both classes uses Microsoft Power BI API.
+In the Controllers section, we have DashboardController. This class generates the PowerBIClient environment with the credentials we have, and gets the list of reports on our PowerBI workspace.
+```csharp
+
+public DashboardController()
+        {
+            this.workspaceCollection = ConfigurationManager.AppSettings["powerbi:WorkspaceCollection"];
+            this.workspaceId = ConfigurationManager.AppSettings["powerbi:WorkspaceId"];
+            this.accessKey = ConfigurationManager.AppSettings["powerbi:AccessKey"];
+            this.apiUrl = ConfigurationManager.AppSettings["powerbi:ApiUrl"];
+        }
+
+```
